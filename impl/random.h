@@ -25,6 +25,8 @@ static TLS struct {
 # include "random/riot.h"
 #elif defined(STM32F4)
 # include "random/stm32.h"
+#elif defined(TARGET_IS_TM4C123_RB1)
+# include "random/tiva.h"
 #else
 # error Unsupported platform
 #endif
